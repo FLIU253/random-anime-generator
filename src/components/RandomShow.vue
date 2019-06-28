@@ -20,8 +20,9 @@
      </div>
     </div>
   </div>
-  <div v-else>
-    XD  
+  <div v-else class = "main-section">
+    <img src="../assets/loader.gif" alt="loader">
+    <h1>Loading.....</h1>
   </div>
 </template>
 
@@ -56,13 +57,15 @@ export default {
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  margin: 0 200px;
+  margin: 0 180px;
 }
 .grid-section{
   display: grid;
   column-gap: 15px;
   grid-template-columns: repeat(3, 1fr);
   height: 300px;
+  background: #F5F5F5;
+  padding: 2em;
 }
 
 h1{

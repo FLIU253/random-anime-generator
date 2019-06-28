@@ -1,7 +1,14 @@
 <template>
  <div class = "main">
-   <h1>Random Anime Generator</h1>
-   <button><router-link :to="{ name: 'RandomShow' }" >Generate!</router-link></button>
+   <div class = "grid-section">
+     <div>
+     <h1>Random Anime Generator</h1>
+     <button><router-link :to="{ name: 'RandomShow' }" >Generate!</router-link></button>
+     </div>
+     <div>
+       <img src="../assets/mitsuha.png" alt="mitsuha poster">
+     </div>
+   </div>
  </div>
 </template>
 
@@ -43,6 +50,7 @@ button{
   border: none;
   border-radius: 4px;
   transition: all .4s;
+  width: 100%;
 }
 button:hover{
   background: #A53244;
@@ -53,5 +61,16 @@ a{
   color: white;
   font-size: 18px;
   font-weight: lighter;
+}
+.grid-section{
+  display: grid;
+  grid-template-columns: 75% 25%;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+img{
+  max-height:300px;
+  width:auto;
 }
 </style>
