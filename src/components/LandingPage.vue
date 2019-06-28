@@ -1,12 +1,11 @@
 <template>
  <div class = "main">
    <h1>Random Anime Generator</h1>
-   <button v-on:click="generateRandom"><router-link :to="{ name: 'RandomShow' }" >Generate!</router-link></button>
+   <button><router-link :to="{ name: 'RandomShow' }" >Generate!</router-link></button>
  </div>
 </template>
 
 <script>
-import getAnime from "@/api/getAnime";
 
 export default {
   name: 'LandingPage',
@@ -17,14 +16,8 @@ export default {
   },
   created(){
   },
-   methods:{
-    generateRandom: (event)=> {
-       getAnime.getRandomShow()
-      .then(response => {
-        console.log(response);
-      })
-      .catch(err => console.log(err));      
-      }
+  methods:{
+   
   }
 }
 </script>
