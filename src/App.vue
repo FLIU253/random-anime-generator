@@ -18,5 +18,6 @@ export default {
 <style>
 *{
   font-family: 'Nunito', sans-serif;
+  margin: 0;
 }
 </style>

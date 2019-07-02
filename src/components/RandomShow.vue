@@ -1,7 +1,9 @@
 <template>
   <div v-if = "loading === false" class="main-section">
     <div v-if="show != undefined"  class="grid-section">
-      <img v-if="show.image_url != null"  :src="show.image_url" alt="">
+     <div style = "text-align:center;">
+        <img v-if="show.image_url != null"  :src="show.image_url" alt="">
+     </div>
      <div>
         <h1>{{show.title}}</h1>
         <div style = "text-align: left;">

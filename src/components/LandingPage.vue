@@ -3,7 +3,13 @@
    <div class = "grid-section">
      <div>
      <h1>Random Anime Generator</h1>
-     <button><router-link :to="{ name: 'RandomShow' }" >Generate!</router-link></button>
+     <button style = "margin-bottom: 20px"><router-link :to="{ name: 'RandomShow' }" >Generate!</router-link></button>
+     <h1 style = "margin: 0">Tier List Generator</h1>
+      <div class = "search-section">
+        <input type="text" placeholder="enter username here" v-model="user">
+        <i class="fas fa-search"></i>
+      </div>
+      <button style = "margin-top: 20px;"><router-link :to="{ name: 'AnimeTierList', params: {user} }" >Generate Tier List!</router-link></button>
      </div>
      <div>
        <img src="../assets/mitsuha.png" alt="mitsuha poster">
@@ -18,7 +24,7 @@ export default {
   name: 'LandingPage',
   data: () => {
     return{
-
+      user: 'enter username here'
     };
   },
   created(){
@@ -51,6 +57,29 @@ button{
   border-radius: 4px;
   transition: all .4s;
   width: 100%;
+}
+.search-section{
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  border: #d8d2d2 1px solid;
+  border-radius: 4px;
+  margin-top: 20px;
+  width: 100%;
+}
+input{
+  width: 100%;
+  max-width: 100%;
+  flex: 1;
+  padding: 7px 14px;
+  font-size: 20px;
+  margin: 0;
+  outline: none;
+  border: 0;
+}
+.search-section i{
+  padding: 7px 14px;
+  font-size: 22px;
 }
 button:hover{
   background: #A53244;
