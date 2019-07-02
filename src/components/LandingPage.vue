@@ -2,6 +2,7 @@
  <div class = "main">
    <div class = "grid-section">
      <div>
+      <GithubCorner url='https://github.com/Roeefl/vue-github-corners' cornerColor='#000000' gitColor='#FFFFFF' :size = "120"></GithubCorner>
      <h1>Random Anime Generator</h1>
      <button style = "margin-bottom: 20px"><router-link :to="{ name: 'RandomShow' }" >Generate!</router-link></button>
      <h1 style = "margin: 0">Tier List Generator</h1>
@@ -19,12 +20,16 @@
 </template>
 
 <script>
+import GithubCorner from 'vue-github-corners';
 
 export default {
   name: 'LandingPage',
+  components: {
+    GithubCorner
+  },
   data: () => {
     return{
-      user: 'enter username here'
+      user: 'Enter MAL username!'
     };
   },
   created(){
