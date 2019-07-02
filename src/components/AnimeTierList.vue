@@ -1,5 +1,5 @@
 <template>
-  <div v-if = 'loading === false && error === false'>
+  <div v-if = 'loading === false && error === false && animeList.length > 0'>
   <div class = "background">
       <h1>{{this.$route.params.user}}'s Tier List</h1>
   </div>
@@ -102,8 +102,8 @@
     <h1>Loading.....</h1>
   </div>
 
-  <div v-else-if = "error === true" class = "loading">
-    <h1>404: username does not exist</h1>
+  <div v-else-if = "error === true || animeList.length === 0" class = "loading">
+    <h1>404: username does not exist or does not have rankings</h1>
      <img src="../assets/shocked.png" alt="shocked face" style = "height: 300px; width:auto;">
   </div>
 
