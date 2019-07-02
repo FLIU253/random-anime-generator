@@ -7,7 +7,7 @@
      <button style = "margin-bottom: 20px"><router-link :to="{ name: 'RandomShow' }" >Generate!</router-link></button>
      <h1 style = "margin: 0">Tier List Generator</h1>
       <div class = "search-section">
-        <input type="text" placeholder="enter username here" v-model="user">
+        <input type="text" placeholder="enter username here" v-model="user" v-on:keyup.enter="onEnter">
         <i class="fas fa-search"></i>
       </div>
       <button style = "margin-top: 20px;"><router-link :to="{ name: 'AnimeTierList', params: {user} }" >Generate Tier List!</router-link></button>
@@ -35,7 +35,9 @@ export default {
   created(){
   },
   methods:{
-   
+    onEnter: function() {
+     this.$router.push({name: 'AnimeTierList',  params: {user: this.user}});
+    }
   }
 }
 </script>

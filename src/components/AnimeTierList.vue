@@ -25,7 +25,7 @@
         </span>
      </div>
 
-      <h1 class = "tier-name" style = "background-color:#5ed5d1">B+ Tier</h1>
+      <h1 class = "tier-name" style = "background-color:#6362B9">B+ Tier</h1>
    <div>
         <span class = "image-container" v-for = "(anime, i) in animeList.filter(function (anime){ return anime.score === 8})" 
         v-bind:key="i">
@@ -98,7 +98,7 @@
   </div>
 
   <div v-else-if="loading === true" class = "loading">
-    <img src="../assets/loader.gif" alt="loader">
+    <img src="../assets/loader.gif" alt="loader" style = "height: 300px; width:auto;">
     <h1>Loading.....</h1>
   </div>
 
