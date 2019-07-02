@@ -208,4 +208,14 @@ img{
   min-height: 100vh;
   margin: 0 180px;
 }
+@media screen and (max-width: 800px) {
+  .tier-section{
+    display: block;
+    text-align: center;
+  }
+  .tier-name{
+    min-height: 0;
+  }
+  
+}
 </style>

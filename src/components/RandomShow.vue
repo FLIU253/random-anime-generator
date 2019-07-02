@@ -117,4 +117,23 @@ P{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #D62929;
 }
+
+@media screen and (max-width: 800px) {
+.main-section{
+    justify-content: start;
+    margin: 0;
+  }
+.grid-section{
+  display:block;
+  background: none;
+}
+h1{
+  font-size: 20px;
+}
+.synopsis{
+  background-color: #F5F5F5;
+  padding: 25px 10px;
+}
+}
+
 </style>

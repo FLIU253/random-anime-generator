@@ -107,4 +107,23 @@ img{
   max-height:300px;
   width:auto;
 }
+
+@media screen and (max-width: 800px) {
+  img{
+    height:0;
+    width:0;
+  }
+  .grid-section{
+    display:block;
+    text-align: center;
+  }
+  h1, input, a{
+    font-size: 15px;
+  }
+  .search-section, button{
+    width: 80%
+  }
+  
+}
+
 </style>
